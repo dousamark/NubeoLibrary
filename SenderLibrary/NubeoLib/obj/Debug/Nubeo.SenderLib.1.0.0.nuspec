@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Nubeo.SenderLib</id>
+    <version>1.0.0</version>
+    <authors>Marek Dousa</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <description>Library for sending messages</description>
+    <releaseNotes>Initial release</releaseNotes>
+    <copyright>2022</copyright>
+    <tags>Dousamark sending messaging</tags>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\dousa\source\repos\NuGet\netstandard2.0\NubeoLib.dll" target="lib\netstandard2.0\NubeoLib.dll" />
+  </files>
+</package>

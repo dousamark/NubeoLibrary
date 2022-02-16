@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageId>Nubeo.SenderLib</PackageId>
+    <Authors>Marek Dousa</Authors>
+    <Product>Nubeo's Sender Library</Product>
+    <Description>Library for sending messages</Description>
+    <Copyright>2022</Copyright>
+    <PackageTags>Dousamark sending messaging</PackageTags>
+    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>C:\Users\dousa\source\repos\NuGet\</OutputPath>
+  </PropertyGroup>
+
+</Project>
