@@ -10,12 +10,12 @@ namespace Program
 		//Entry point
 		static void Main(string[] args)
 		{
-            
             List<SenderClient> users = SqliteDataAccess.LoadClients();
 
+            //checking for users correct signing credentials
             if (Validator.CheckUsersInDatabase(args,users))
 			{
-                SenderClient client = new SenderClient(args[0]);
+                SenderClient client = new SenderClient(args[0],args[1]);
                 Console.WriteLine("You have been logged in...");
 
                 Phone phone = new Phone(new PhoneAddress(777111333, Prefix.Czech));
@@ -37,7 +37,7 @@ namespace Program
             }
 			else
 			{
-				Console.WriteLine("Wrong input of args. Check ReadMe file under Instuctions.");
+				Console.WriteLine("Wrong singing credentials");
 			}
         }
     }

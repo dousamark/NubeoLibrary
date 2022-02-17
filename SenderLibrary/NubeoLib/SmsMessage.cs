@@ -30,6 +30,7 @@ namespace NubeoLib
 			this.dateRecieved = dateReceived;
 		}
 
+		//overriding ToString for intuitive converting content to string
 		public override string ToString()
 		{
 			return @"This message has been recieved at " + dateRecieved.ToString() +

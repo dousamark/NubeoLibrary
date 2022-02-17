@@ -4,8 +4,5 @@ using System.Text;
 
 namespace NubeoLib
 {
-	public abstract class Address
-	{
-        
-    }
+	public abstract class Address { }
 }

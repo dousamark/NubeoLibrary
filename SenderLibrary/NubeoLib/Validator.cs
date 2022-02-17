@@ -4,9 +4,10 @@ using System.Text;
 
 namespace NubeoLib
 {
+	//class for potentional development overseeing all validations
 	public static class Validator
 	{
-		internal static bool CheckUsersInDatabase(string[] args, List<SenderClient> users)
+		public static bool CheckUsersInDatabase(string[] args, List<SenderClient> users)
 		{
 			try
 			{

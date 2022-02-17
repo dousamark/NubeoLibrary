@@ -6,15 +6,14 @@ using System.IO.Ports;
 
 [assembly: System.Runtime.CompilerServices.InternalsVisibleTo("Program")]
 
-
 namespace NubeoLib
 {
 	public class SenderClient 
 	{
-		private string username;
+		private readonly string username;
 		public string Username => username;
 
-		private string password;
+		private readonly string password;
 		public string Password => password;
 
 		private List<Device> devices;
@@ -59,6 +58,7 @@ namespace NubeoLib
 			}
 		}
 
+		//Empties users senderbox by sending messages and then cleaning Dictionary
 		public void SendSenderBox()
 		{
 			foreach(KeyValuePair<Device, IMessage> message in SenderBox)
@@ -70,7 +70,7 @@ namespace NubeoLib
 
 		private void EmptySenderBox()
 		{
-			this.senderBox = new Dictionary<Device, IMessage>();
+			this.senderBox.Clear();
 		}
 	}
 }

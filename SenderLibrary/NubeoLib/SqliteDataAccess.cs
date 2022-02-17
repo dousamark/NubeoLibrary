@@ -11,6 +11,7 @@ namespace NubeoLib
 {
 	public class SqliteDataAccess
 	{
+		//creating a connection for loading database
 		public static List<SenderClient> LoadClients()
 		{
 			using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
@@ -20,6 +21,7 @@ namespace NubeoLib
 			}
 		}
 
+		//getting ConnectionString from App.config, assuming id is "Default"
 		private static string LoadConnectionString(string id = "Default")
 		{
 			return ConfigurationManager.ConnectionStrings[id].ConnectionString;

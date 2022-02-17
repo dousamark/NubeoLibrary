@@ -6,7 +6,7 @@ namespace NubeoLib
 {
 	public class Phone : Device
 	{
-		private PhoneAddress address;
+		private readonly PhoneAddress address;
 		public override Address Address => address;
 
 		public Phone(PhoneAddress address)
