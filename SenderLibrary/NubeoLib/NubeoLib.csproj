@@ -17,4 +17,8 @@
     <OutputPath>C:\Users\dousa\source\repos\NuGet\</OutputPath>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.IO.Ports" Version="6.0.0" />
+  </ItemGroup>
+
 </Project>

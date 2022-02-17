@@ -12,7 +12,9 @@
     <copyright>2022</copyright>
     <tags>Dousamark sending messaging</tags>
     <dependencies>
-      <group targetFramework=".NETStandard2.0" />
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="System.IO.Ports" version="6.0.0" exclude="Build,Analyzers" />
+      </group>
     </dependencies>
   </metadata>
   <files>
