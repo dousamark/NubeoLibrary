@@ -12,12 +12,13 @@ namespace UnitTestNubeoLib
 		public void SqliteDataAccess_CorrectUsersFromDB()
 		{
 			//arrange
-			List<SenderClient> expectedUsers = new List<SenderClient>();
-			expectedUsers.Add(new SenderClient("DemoUser", "PaperlessToBrighterFuture"));
+			List<SenderClient> expectedUsers = new List<SenderClient>
+			{
+				new SenderClient("DemoUser", "PaperlessToBrighterFuture")
+			};
 
 			//act
 			List<SenderClient> actualUsers = SqliteDataAccess.LoadClients();
-			bool TestValidityOutput = expectedUsers.SequenceEqual(actualUsers); ;
 
 			//assert
 			CollectionAssert.AreEqual(expectedUsers, actualUsers);
@@ -27,12 +28,13 @@ namespace UnitTestNubeoLib
 		public void SqliteDataAccess_WrongUsersFromDB()
 		{
 			//arrange
-			List<SenderClient> expectedUsers = new List<SenderClient>();
-			expectedUsers.Add(new SenderClient("DemoUserrr", "PaperlessToBrighterFuture"));
+			List<SenderClient> expectedUsers = new List<SenderClient>
+			{
+				new SenderClient("DemoUserrr", "PaperlessToBrighterFuture")
+			};
 
 			//act
 			List<SenderClient> actualUsers = SqliteDataAccess.LoadClients();
-			bool TestValidityOutput = expectedUsers.SequenceEqual(actualUsers); ;
 
 			//assert
 			CollectionAssert.AreNotEqual(expectedUsers, actualUsers);

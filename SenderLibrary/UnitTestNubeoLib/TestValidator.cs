@@ -14,8 +14,10 @@ namespace UnitTestNubeoLib
 			string[] args = new string[] { "DemoUser", "PaperlessToBrighterFuture"};
 
 			//act
-			List<SenderClient> users = new List<SenderClient>();
-			users.Add(new SenderClient("DemoUser", "PaperlessToBrighterFuture"));
+			List<SenderClient> users = new List<SenderClient>
+			{
+				new SenderClient("DemoUser", "PaperlessToBrighterFuture")
+			};
 			bool TestValidityOutput = Validator.CheckUsersInDatabase(args,users);
 
 			//assert
@@ -29,8 +31,10 @@ namespace UnitTestNubeoLib
 			string[] args = new string[] { "DemoUser", "PaperlessToWorseFuture"};
 
 			//act
-			List<SenderClient> users = new List<SenderClient>();
-			users.Add(new SenderClient("DemoUser", "PaperlessToBrighterFuture"));
+			List<SenderClient> users = new List<SenderClient>
+			{
+				new SenderClient("DemoUser", "PaperlessToBrighterFuture")
+			};
 			bool TestValidityOutput = Validator.CheckUsersInDatabase(args, users);
 
 			//assert
@@ -44,8 +48,10 @@ namespace UnitTestNubeoLib
 			string[] args = new string[] { "DemoUserrr", "PaperlessToBrighterFuture" };
 
 			//act
-			List<SenderClient> users = new List<SenderClient>();
-			users.Add(new SenderClient("DemoUser", "PaperlessToBrighterFuture"));
+			List<SenderClient> users = new List<SenderClient>
+			{
+				new SenderClient("DemoUser", "PaperlessToBrighterFuture")
+			};
 			bool TestValidityOutput = Validator.CheckUsersInDatabase(args, users);
 
 			//assert

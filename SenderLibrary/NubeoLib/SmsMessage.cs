@@ -34,8 +34,8 @@ namespace NubeoLib
 		public override string ToString()
 		{
 			return @"This message has been recieved at " + dateRecieved.ToString() +
-				" from a number " + (int)senderAddress.prefix + senderAddress.phoneNumber +
-				" to a number " + (int)recieverAddress.prefix + recieverAddress.phoneNumber +
+				" from a number " + (int)senderAddress.Prefix + senderAddress.PhoneNumber +
+				" to a number " + (int)recieverAddress.Prefix + recieverAddress.PhoneNumber +
 				" and says: \"" + text + "\"";
 		}
 	}

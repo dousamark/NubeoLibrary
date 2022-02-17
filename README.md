@@ -1,23 +1,30 @@
 # Status 
 
 This library is maintained by [Marek Dousa](https://github.com/dousamark).
+For programming documentation open ProgrammerDocumentation.rtf
 
 # Nubeo Library
 
-A easy to use library. //TODO
+A easy to use library for sending SMS. Structured in a way to ease further development. 
 
 ## Usage
 
-//TODO
+Sending sms messages (can be expanded to Email, Viber, WhatsUp) with phone (can be expanded to various devices).
 
 ## Instructions
 
-Args: phoneNumber, country, text (can be devided by whitespaces as normal message)
-//TODO 
+For creating demo account you need to sign up at our website: paperlessToBrighterFuture.com, where all further signing instructions are provided.
+For documentation about gateway open ProgrammerDocumentation.rtf
 
-## Documentation
+## Further development
 
-The documentation can be found on the [wiki](https://github.com/hhariri/EasyHttp/wiki). 
+- ServerClient could inherit from Client to enable further options such as RecipientClient
+- Whole gateway can run a Server for overseeing all Clients
+- More devices could be implemented such as a Computer or a Tablet and more specific devices such as iPhone or Samsung inheriting from Phone
+
+## Documentations
+
+All documentations are coved in ProggrammerDocumentation.rtf and SystemDocumentation.rtf
 
 ## Tests
 

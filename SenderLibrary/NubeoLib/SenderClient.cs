@@ -58,7 +58,7 @@ namespace NubeoLib
 			}
 		}
 
-		//Empties users senderbox by sending messages and then cleaning Dictionary
+		//Empties users senderbox by sending messages and then clearing Dictionary
 		public void SendSenderBox()
 		{
 			foreach(KeyValuePair<Device, IMessage> message in SenderBox)
