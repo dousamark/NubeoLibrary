@@ -4,22 +4,16 @@ using System.Text;
 
 namespace NubeoLib
 {
-	class PhoneConnection : Connection
+	abstract class Device
 	{
-
-		public PhoneConnection()
+		public abstract Address Address
 		{
-
-		}
-		public PhoneConnection(string connection)
-		{
-
+			get;
 		}
 
-		public void Send(SmsMessage message)
+		public virtual void SendMessage(IMessage message) 
 		{
 			Console.WriteLine(message.ToString());
 		}
-
 	}
 }

@@ -4,13 +4,16 @@ using System.Text;
 
 namespace NubeoLib
 {
-	class SmsMessage : Message
+	class SmsMessage : IMessage
 	{
-		private Address senderAddress;
-		public Address SenderAddress => senderAddress;
+		private PhoneAddress senderAddress;
+		public PhoneAddress SenderAddress => senderAddress;
 
-		private DateTime dateReceived;
-		public DateTime DateReceived => dateReceived;
+		private PhoneAddress recieverAddress;
+		public PhoneAddress RecieverAddress => recieverAddress;
+
+		private DateTime dateRecieved;
+		public DateTime DateReceived => dateRecieved;
 
 		private string text;
 		public string Text    
@@ -19,18 +22,20 @@ namespace NubeoLib
 			set => text = value;
 		}
 
-		public SmsMessage(int phoneNumber, Prefix prefix, string text, DateTime dateReceived)
+		public SmsMessage(PhoneAddress from, PhoneAddress to, string text, DateTime dateReceived)
 		{
-			this.senderAddress = new Address(phoneNumber, prefix);
+			this.senderAddress = from;
+			this.recieverAddress = to;
 			this.text = text;
-			this.dateReceived = dateReceived;
+			this.dateRecieved = dateReceived;
 		}
 
 		public override string ToString()
 		{
-			return @"This message has been recieved at " + dateReceived.ToString() +
-				" from a number " + senderAddress.prefix + senderAddress.phoneNumber +
-				" and says " + text;
+			return @"This message has been recieved at " + dateRecieved.ToString() +
+				" from a number " + (int)senderAddress.prefix + senderAddress.phoneNumber +
+				" to a number " + (int)recieverAddress.prefix + recieverAddress.phoneNumber +
+				" and says: \"" + text + "\"";
 		}
 	}
 }

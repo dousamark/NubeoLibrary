@@ -4,8 +4,8 @@ using System.Text;
 
 namespace NubeoLib
 {
-	interface Connection
+	abstract class Address
 	{
-		void Send(SmsMessage message);
-	}
+        
+    }
 }

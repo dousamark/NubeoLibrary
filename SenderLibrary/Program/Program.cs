@@ -9,27 +9,27 @@ namespace Program
 		//Entry point
 		static void Main(string[] args)
 		{
-            if (Validator.checkArgs(args))
+            if (Validator.CheckArgs(args))
 			{
-                int phoneNumber = int.Parse(args[0]);
-                Prefix prefix = (Prefix)Enum.Parse(typeof(Prefix), args[1], true);
-                
-                //TODO: ne jako args 2 ale concatnout od 2 do konce args.len
-                string textMessage = args[2];
-                DateTime dateSent = DateTime.Now;
+                SenderClient client = new SenderClient(args[0]);
+                Console.WriteLine("User logged in...");
 
-                PhoneConnection phoneConnection = new PhoneConnection();
+                Phone phone = new Phone(new PhoneAddress(777111333, Prefix.Czech));
+                client.AddDeviceToList(phone);
+                Console.WriteLine("User Phone created and connected to user...");
 
-                Console.WriteLine("Sending message...");
-                try
-                {
-                    phoneConnection.Send(new SmsMessage(phoneNumber, prefix,textMessage, dateSent));
-                    Console.WriteLine("Message Sent!");
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Failed to list messages: " + ex.ToString());
-                }
+                SmsMessage message = new SmsMessage(
+                    (PhoneAddress)phone.Address,
+                    new PhoneAddress(777115115, Prefix.Slovak),
+                    "Welcome to Nubeo",
+                    DateTime.Now);
+
+                client.AddMessageToSenderBox(phone,message);
+				Console.WriteLine("Message created and added to the users sender box...");
+
+                client.SendSenderBox();   
+                Console.WriteLine("Message Sent!");
+
             }
 			else
 			{
