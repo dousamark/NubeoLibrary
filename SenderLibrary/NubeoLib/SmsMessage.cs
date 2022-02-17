@@ -4,7 +4,7 @@ using System.Text;
 
 namespace NubeoLib
 {
-	class SmsMessage : IMessage
+	public class SmsMessage : IMessage
 	{
 		private PhoneAddress senderAddress;
 		public PhoneAddress SenderAddress => senderAddress;

@@ -13,6 +13,9 @@
     <tags>Dousamark sending messaging</tags>
     <dependencies>
       <group targetFramework=".NETStandard2.0">
+        <dependency id="Dapper" version="2.0.123" exclude="Build,Analyzers" />
+        <dependency id="System.Configuration.ConfigurationManager" version="6.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.Data.SQLite.Core" version="1.0.115.5" exclude="Build,Analyzers" />
         <dependency id="System.IO.Ports" version="6.0.0" exclude="Build,Analyzers" />
       </group>
     </dependencies>

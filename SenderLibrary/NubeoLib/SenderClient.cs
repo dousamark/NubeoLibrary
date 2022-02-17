@@ -9,10 +9,13 @@ using System.IO.Ports;
 
 namespace NubeoLib
 {
-	class SenderClient 
+	public class SenderClient 
 	{
 		private string username;
 		public string Username => username;
+
+		private string password;
+		public string Password => password;
 
 		private List<Device> devices;
 		public List<Device> Devices 
@@ -28,10 +31,12 @@ namespace NubeoLib
 			set { senderBox = value; }
 		}
 		
+		public SenderClient() { }
 
-		public SenderClient(string username)
+		public SenderClient(string username, string password)
 		{
 			this.username = username;
+			this.password = password;
 			this.devices = new List<Device>();
 			this.senderBox = new Dictionary<Device, IMessage>();
 		}

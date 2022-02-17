@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO.Ports;
 using NubeoLib;
 
@@ -9,10 +10,13 @@ namespace Program
 		//Entry point
 		static void Main(string[] args)
 		{
-            if (Validator.CheckArgs(args))
+            
+            List<SenderClient> users = SqliteDataAccess.LoadClients();
+
+            if (Validator.CheckUsersInDatabase(args,users))
 			{
                 SenderClient client = new SenderClient(args[0]);
-                Console.WriteLine("User logged in...");
+                Console.WriteLine("You have been logged in...");
 
                 Phone phone = new Phone(new PhoneAddress(777111333, Prefix.Czech));
                 client.AddDeviceToList(phone);

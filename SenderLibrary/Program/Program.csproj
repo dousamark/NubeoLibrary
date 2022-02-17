@@ -6,8 +6,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="DemoDB.db" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="DemoDB.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Nubeo.SenderLib" Version="1.0.0" />
     <PackageReference Include="NuGet.Protocol" Version="6.0.0" />
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.115.5" />
   </ItemGroup>
 
   <ItemGroup>

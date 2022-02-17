@@ -4,7 +4,7 @@ using System.Text;
 
 namespace NubeoLib
 {
-	class PhoneAddress : Address
+	public class PhoneAddress : Address
 	{
         public Prefix prefix;
         public int phoneNumber;

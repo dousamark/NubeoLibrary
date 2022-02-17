@@ -6,27 +6,23 @@ namespace NubeoLib
 {
 	public static class Validator
 	{
-		public static bool CheckArgs(string[] args)
+		internal static bool CheckUsersInDatabase(string[] args, List<SenderClient> users)
 		{
-			if (IsInNameDatabase(args[0]) && CorrectPassword(args[0],args[1]))
+			try
 			{
-				return true;
-			}
-			else
+				foreach (SenderClient client in users)
+				{
+					if (client.Username == args[0] && client.Password == args[1])
+					{
+						return true;
+					}
+				}
+				return false;
+			} catch (Exception)
 			{
+				Console.WriteLine("Incorrect username or password");
 				return false;
 			}
-		}
-
-		private static bool CorrectPassword(string user, string passw)
-		{
-			return true;
-		}
-
-		private static bool IsInNameDatabase(string v)
-		{
-			//for further implementation
-			return true;
 		}
 	}
 }

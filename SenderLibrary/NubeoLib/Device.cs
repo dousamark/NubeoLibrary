@@ -4,7 +4,7 @@ using System.Text;
 
 namespace NubeoLib
 {
-	abstract class Device
+	public abstract class Device
 	{
 		public abstract Address Address
 		{

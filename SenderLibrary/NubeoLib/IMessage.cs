@@ -4,7 +4,7 @@ using System.Text;
 
 namespace NubeoLib
 {
-	interface IMessage
+	public interface IMessage
 	{
 		string Text
 		{

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace NubeoLib
 {
-	class Phone : Device
+	public class Phone : Device
 	{
 		private PhoneAddress address;
 		public override Address Address => address;
