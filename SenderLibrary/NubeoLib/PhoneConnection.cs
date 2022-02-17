@@ -16,14 +16,9 @@ namespace NubeoLib
 
 		}
 
-		public void ShowProgress(string message)
-		{
-			Console.WriteLine(message);
-		}
-
 		public void Send(SmsMessage message)
 		{
-
+			Console.WriteLine(message.ToString());
 		}
 
 	}

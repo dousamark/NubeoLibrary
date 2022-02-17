@@ -1,9 +1,10 @@
 C:\Users\dousa\source\repos\NuGet\netstandard2.0\NubeoLib.deps.json
 C:\Users\dousa\source\repos\NuGet\netstandard2.0\NubeoLib.dll
 C:\Users\dousa\source\repos\NuGet\netstandard2.0\NubeoLib.pdb
-C:\Users\dousa\Documents\GitHub\NubeoLibrary\SenderLibrary\NubeoLib\obj\Debug\netstandard2.0\NubeoLib.csprojAssemblyReference.cache
 C:\Users\dousa\Documents\GitHub\NubeoLibrary\SenderLibrary\NubeoLib\obj\Debug\netstandard2.0\NubeoLib.AssemblyInfoInputs.cache
 C:\Users\dousa\Documents\GitHub\NubeoLibrary\SenderLibrary\NubeoLib\obj\Debug\netstandard2.0\NubeoLib.AssemblyInfo.cs
 C:\Users\dousa\Documents\GitHub\NubeoLibrary\SenderLibrary\NubeoLib\obj\Debug\netstandard2.0\NubeoLib.csproj.CoreCompileInputs.cache
 C:\Users\dousa\Documents\GitHub\NubeoLibrary\SenderLibrary\NubeoLib\obj\Debug\netstandard2.0\NubeoLib.dll
 C:\Users\dousa\Documents\GitHub\NubeoLibrary\SenderLibrary\NubeoLib\obj\Debug\netstandard2.0\NubeoLib.pdb
+C:\Users\dousa\Documents\GitHub\NubeoLibrary\SenderLibrary\NubeoLib\obj\Debug\netstandard2.0\NubeoLib.csproj.AssemblyReference.cache
+C:\Users\dousa\Documents\GitHub\NubeoLibrary\SenderLibrary\NubeoLib\obj\Debug\netstandard2.0\NubeoLib.GeneratedMSBuildEditorConfig.editorconfig

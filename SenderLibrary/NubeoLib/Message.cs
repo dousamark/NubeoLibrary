@@ -9,7 +9,5 @@ namespace NubeoLib
 		Address SenderAddress;
 		DateTime DateReceived;
 		string Text;
-
-		//TODO: add methods
 	}
 }

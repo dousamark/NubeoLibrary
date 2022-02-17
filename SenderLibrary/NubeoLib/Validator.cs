@@ -4,8 +4,11 @@ using System.Text;
 
 namespace NubeoLib
 {
-	interface Connection
+	class Validator
 	{
-		void Send(SmsMessage message);
+		public static bool checkArgs(string[] args)
+		{
+			return true;
+		}
 	}
 }

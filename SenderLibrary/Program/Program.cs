@@ -8,21 +8,33 @@ namespace Program
 	{
 		//Entry point
 		static void Main(string[] args)
-		{   
-            PhoneConnection phoneConnection = new PhoneConnection();
+		{
+            if (Validator.checkArgs(args))
+			{
+                int phoneNumber = int.Parse(args[0]);
+                Prefix prefix = (Prefix)Enum.Parse(typeof(Prefix), args[1], true);
+                
+                //TODO: ne jako args 2 ale concatnout od 2 do konce args.len
+                string textMessage = args[2];
+                DateTime dateSent = DateTime.Now;
 
-            phoneConnection.ShowProgress("Sending message...");
-            try
-            {
-                phoneConnection.Send(new SmsSubmitMessage(new Address("46730000000", TypeOfAddress.International, NumberingPlan.ISDNOrPhone), "ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ1abcdefghijklmnopqrstuvwxyzåäö2ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ3abcdefghijklmnopqrstuvwxyzåäö4ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ5abcdefghijklmnopqrstuvwxyzåäö6ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ7abcdefghijklmnopqrstuvwxyzåäö8ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ9abcdefghijklmnopqrstuvwxyzåäö0"));
-                phoneConnection.ShowProgress("Message Sent!");
-            }
-            catch (Exception ex)
-            {
-                phoneConnection.ShowProgress("Failed to list messages: " + ex.ToString());
-            }
-            
+                PhoneConnection phoneConnection = new PhoneConnection();
 
+                Console.WriteLine("Sending message...");
+                try
+                {
+                    phoneConnection.Send(new SmsMessage(phoneNumber, prefix,textMessage, dateSent));
+                    Console.WriteLine("Message Sent!");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Failed to list messages: " + ex.ToString());
+                }
+            }
+			else
+			{
+				Console.WriteLine("Wrong input of args. Check ReadMe file under Instuctions.");
+			}
         }
     }
 }

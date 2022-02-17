@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nAf8HwLFv0s6Oma2AJkFB3+tQJjQgCKVZVOVQ5mHyc8asc8gChKU106H2IOQmfvxrtF5QWXXg/z8YbmE5UGt0Q==",
+  "dgSpecHash": "Glu7WzDS8pRbWdJ+6Kmjojxa5Y04TWGxPsG5I23Wfdex+Cd8PfcldCe1zHLOAaWbURvVYmp+FqyDFbHoP802zw==",
   "success": true,
   "projectFilePath": "C:\\Users\\dousa\\Documents\\GitHub\\NubeoLibrary\\SenderLibrary\\Program\\Program.csproj",
   "expectedPackageFiles": [
@@ -26,8 +26,7 @@
     "C:\\Users\\dousa\\.nuget\\packages\\system.security.cryptography.cng\\5.0.0\\system.security.cryptography.cng.5.0.0.nupkg.sha512",
     "C:\\Users\\dousa\\.nuget\\packages\\system.security.cryptography.pkcs\\5.0.0\\system.security.cryptography.pkcs.5.0.0.nupkg.sha512",
     "C:\\Users\\dousa\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.4.0\\system.security.cryptography.protecteddata.4.4.0.nupkg.sha512",
-    "C:\\Users\\dousa\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
-    "C:\\Users\\dousa\\.nuget\\packages\\nubeo.senderlib\\1.0.0\\nubeo.senderlib.1.0.0.nupkg.sha512"
+    "C:\\Users\\dousa\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }
