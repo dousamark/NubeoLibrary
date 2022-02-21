@@ -1,6 +1,6 @@
 # Status 
 
-This library is maintained by [Marek Dousa](https://github.com/dousamark).
+This library, written in .NET Core for cross platform compatibility, is maintained by [Marek Dousa](https://github.com/dousamark).
 For programming documentation open ProgrammerDocumentation.rtf
 
 # Nubeo Library
